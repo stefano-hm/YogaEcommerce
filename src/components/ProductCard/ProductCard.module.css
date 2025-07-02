@@ -1,0 +1,41 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  border-radius: 6px;
+}
+
+.title {
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.description {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.price {
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.buyButton {
+  padding: 0.5rem 1rem;
+  background-color: #49a078;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.buyButton:hover {
+  background-color: #3b8863;
+}

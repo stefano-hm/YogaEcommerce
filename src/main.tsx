@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 
 import { Buffer } from 'buffer'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
@@ -19,12 +20,14 @@ const queryClient = new QueryClient()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <WagmiProvider config={config}>
-      <QueryClientProvider client={queryClient}>
-        <RainbowKitProvider>
-          <App />
-        </RainbowKitProvider>
-      </QueryClientProvider>
-    </WagmiProvider>
+    <BrowserRouter>
+      <WagmiProvider config={config}>
+        <QueryClientProvider client={queryClient}>
+          <RainbowKitProvider>
+            <App />
+          </RainbowKitProvider>
+        </QueryClientProvider>
+      </WagmiProvider>
+    </BrowserRouter>
   </React.StrictMode>
 )

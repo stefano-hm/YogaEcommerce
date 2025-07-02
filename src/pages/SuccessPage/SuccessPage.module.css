@@ -1,0 +1,19 @@
+.success {
+  padding: 4rem 2rem;
+  background-color: #e8fff1;
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #1d4d3f;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #3a6752;
+  text-align: center;
+}
