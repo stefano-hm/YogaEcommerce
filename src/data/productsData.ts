@@ -9,7 +9,7 @@ const products: Product[] = [
   {
     title: 'Basic Yoga Package',
     description: 'Gentle workouts for beginners. 3 sessions per week.',
-    priceEth: 0.01,
+    priceEth: 0.00001,
     imageUrl:
       'https://cdn.leonardo.ai/users/e788e1ef-57cd-49bc-b46c-9bed2d234802/generations/a94e203f-4674-4c71-a78e-f93db8b52dab/Leonardo_Phoenix_10_Studioquality_product_photo_of_a_premium_y_0.jpg',
   },

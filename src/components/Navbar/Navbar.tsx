@@ -13,9 +13,6 @@ const Navbar: React.FC = () => {
         <NavLink to="/store" className={({ isActive }) => (isActive ? styles.active : '')}>
           Store
         </NavLink>
-        <NavLink to="/success" className={({ isActive }) => (isActive ? styles.active : '')}>
-          Success
-        </NavLink>
       </div>
       <ConnectButton />
     </nav>

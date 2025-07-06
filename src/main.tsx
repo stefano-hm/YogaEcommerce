@@ -10,11 +10,12 @@ import { HelmetProvider } from 'react-helmet-async'
 
 import App from './App.tsx'
 import { config } from './wagmi.ts'
+import ToastProvider from './components/ToastProvider/ToastProvider'
+
 
 import '@rainbow-me/rainbowkit/styles.css'
 import './index.css'
 
-// Polyfill necessario per alcune librerie
 globalThis.Buffer = Buffer
 
 const queryClient = new QueryClient()
@@ -27,6 +28,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <QueryClientProvider client={queryClient}>
             <RainbowKitProvider>
               <App />
+              <ToastProvider />
             </RainbowKitProvider>
           </QueryClientProvider>
         </WagmiProvider>
