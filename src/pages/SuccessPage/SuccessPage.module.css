@@ -1,19 +1,14 @@
-.success {
+.page {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
   padding: 4rem 2rem;
-  background-color: #e8fff1;
+  background: linear-gradient(135deg, #fef9f6, #f4ede4);
   min-height: 100vh;
+  align-items: center;
 }
 
-.title {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #1d4d3f;
-  text-align: center;
-  margin-bottom: 1rem;
-}
-
-.subtitle {
-  font-size: 1.1rem;
-  color: #3a6752;
-  text-align: center;
+.section {
+  width: 100%;
+  max-width: 960px;
 }

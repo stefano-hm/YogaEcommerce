@@ -1,0 +1,31 @@
+.benefits {
+  background: #fef9f6;
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 2rem;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.15rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.list li {
+  margin-bottom: 1rem;
+  position: relative;
+  padding-left: 1.5rem;
+}

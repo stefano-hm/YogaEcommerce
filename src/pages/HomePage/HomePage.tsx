@@ -1,22 +1,44 @@
 import { Helmet } from 'react-helmet-async'
 import styles from './HomePage.module.css'
 
+import HeroSection from '../../components/HomePageComponents/HeroSection/HeroSection'
+import AboutSection from '../../components/HomePageComponents/AboutSection/AboutSection'
+import HowItWorksSection from '../../components/HomePageComponents/HowItWorksSection/HowItWorksSection'
+import BenefitsSection from '../../components/HomePageComponents/BenefitsSection/BenefitsSection'
+import CallToAction from '../../components/HomePageComponents/CallToAction/CallToAction'
+
+
 function HomePage() {
   return (
     <>
       <Helmet>
         <title>Home | Gianni's Yoga dApp</title>
-        <meta name="description" content="Buy exclusive yoga products and pay securely with ETH on Gianni's decentralized app." />
+        <meta
+          name="description"
+          content="Buy exclusive yoga products and pay securely with ETH on Gianni's decentralized app."
+        />
       </Helmet>
 
-      <section className={styles.home}>
-        <div className={styles.hero}>
-          <h2 className={styles.title}>Welcome to Gianni’s Yoga dApp</h2>
-          <p className={styles.subtitle}>Buy exclusive products and pay securely with ETH.</p>
+      <main className={styles.page}>
+        <div className={styles.section}>
+          <HeroSection />
         </div>
-      </section>
+        <div className={styles.section}>
+          <BenefitsSection />
+        </div>
+        <div className={styles.section}>
+          <AboutSection />
+        </div>
+        <div className={styles.section}>
+          <HowItWorksSection />
+        </div>
+        <div className={styles.section}>
+          <CallToAction />
+        </div>
+      </main>
     </>
   )
 }
 
 export default HomePage
+

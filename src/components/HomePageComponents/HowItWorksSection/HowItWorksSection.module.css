@@ -1,0 +1,48 @@
+.howItWorks {
+  background-color: #f4ede4;
+  padding: 4rem 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 2rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.step {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  font-size: 1.1rem;
+  color: #444;
+  position: relative;
+}
+
+.number {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background-color: #60a5fa;
+  color: #fff;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
