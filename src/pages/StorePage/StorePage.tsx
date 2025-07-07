@@ -1,7 +1,9 @@
 import { Helmet } from 'react-helmet-async'
 import styles from './StorePage.module.css'
-import ProductCard from '../../components/ProductCard/ProductCard'
-import products, { Product } from '../../data/productsData'
+import products from '../../data/productsData'
+import StoreIntro from '../../components/StorePageComponents/StoreIntro/StoreIntro'
+import ProductGrid from '../../components/StorePageComponents/ProductGrid/ProductGrid'
+import StoreCTA from '../../components/StorePageComponents/StoreCTA/StoreCTA'
 
 const StorePage = () => {
   return (
@@ -12,16 +14,18 @@ const StorePage = () => {
       </Helmet>
 
       <div className={styles.container}>
-        <h2>Gianni’s Yoga Packages</h2>
-        <div className={styles.grid}>
-          {products.map((product: Product, index: number) => (
-            <ProductCard product={product} key={index} />
-          ))}
-        </div>
+        <StoreIntro />
       </div>
+      <div className={styles.container}>
+        <h2>Gianni’s Yoga Packages</h2>
+        <ProductGrid products={products} />
+      </div>
+      <div className={styles.container}>
+        <StoreCTA />
+      </div>
+      
     </>
   )
 }
 
 export default StorePage
-

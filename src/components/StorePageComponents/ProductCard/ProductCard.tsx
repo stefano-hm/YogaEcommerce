@@ -55,7 +55,10 @@ const ProductCard = ({ product }: Props) => {
   }
 
   return (
-    <div className={styles.card}>
+    <div 
+    className={styles.card}
+    id={product.title.toLowerCase().includes('basic') ? 'basic' : undefined}
+    >
       <img src={product.imageUrl} alt={product.title} className={styles.image} />
       <h3 className={styles.title}>{product.title}</h3>
       <p className={styles.description}>{product.description}</p>
