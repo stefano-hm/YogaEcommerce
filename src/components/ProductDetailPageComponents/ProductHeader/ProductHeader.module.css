@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.image {
+  width: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
+
+.title {
+  margin-top: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1f2937; 
+  text-align: center;
+}

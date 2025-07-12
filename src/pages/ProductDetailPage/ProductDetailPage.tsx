@@ -1,11 +1,14 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-import { useSendTransaction } from 'wagmi'
+import { useSendTransaction, useAccount } from 'wagmi'
 import { parseEther } from 'viem'
 import toast from 'react-hot-toast'
 import { useState } from 'react'
 
 import { products } from '../../data/productsData'
+import ProductHeader from '../../components/ProductDetailPageComponents/ProductHeader/ProductHeader'
+import ProductDescription from '../../components/ProductDetailPageComponents/ProductDescription/ProductDescription'
+import BuyButton from '../../components/ProductDetailPageComponents/BuyButton/BuyButton'
 import styles from './ProductDetailPage.module.css'
 
 function ProductDetailPage() {
@@ -13,14 +16,17 @@ function ProductDetailPage() {
   const navigate = useNavigate()
   const [isLoading, setIsLoading] = useState(false)
   const { sendTransactionAsync } = useSendTransaction()
+  const { isConnected } = useAccount()
 
   const product = products.find((p) => p.slug === slug)
-
-  if (!product) {
-    return <div style={{ padding: '2rem' }}>Product not found</div>
-  }
+  if (!product) return <div style={{ padding: '2rem' }}>Product not found</div>
 
   const handleBuy = async () => {
+    if (!isConnected) {
+      toast.error('Please connect your wallet to proceed.')
+      return
+    }
+
     try {
       setIsLoading(true)
 
@@ -29,16 +35,11 @@ function ProductDetailPage() {
         value: parseEther(product.priceEth.toString()),
       })
 
-      toast.success(
-        <span>
-          Acquisto riuscito!{' '}
-        </span>,
-        { duration: 8000 }
-      )
+      toast.success('Purchase successful!', { duration: 8000 })
 
       navigate('/success', { state: { product, txHash: hash } })
     } catch (err) {
-      toast.error('Errore durante il pagamento.')
+      toast.error('Payment failed.')
     } finally {
       setIsLoading(false)
     }
@@ -53,17 +54,13 @@ function ProductDetailPage() {
 
       <main className={styles.page}>
         <div className={styles.card}>
-          <img src={product.imageUrl} alt={product.title} className={styles.image} />
-          <h1 className={styles.title}>{product.title}</h1>
-          <p className={styles.description}>{product.description}</p>
+          <ProductHeader title={product.title} imageUrl={product.imageUrl} />
+          <ProductDescription fullText={product.fullText} />
           <p className={styles.price}>{product.priceEth} ETH</p>
-          <button
-            className={styles.buyButton}
+          <BuyButton
             onClick={handleBuy}
-            disabled={isLoading}
-          >
-            {isLoading ? 'Acquisto in corso...' : 'Buy now'}
-          </button>
+            isLoading={isLoading}
+          />
         </div>
       </main>
     </>

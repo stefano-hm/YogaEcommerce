@@ -1,16 +1,22 @@
-import { Link } from 'react-router-dom'
 import styles from './StoreCTA.module.css'
 
-function StoreCTA() {
+type StoreCTAProps = {
+  onScrollToProduct: () => void
+}
+
+function StoreCTA({ onScrollToProduct }: StoreCTAProps) {
   return (
     <section className={styles.cta}>
       <h3 className={styles.title}>Just starting out?</h3>
-      <p className={styles.text}>Begin your journey with our <strong>Basic Yoga Package</strong>. It's the perfect first step to inner balance.</p>
-      <Link to="/store#basic" className={styles.button}>
+      <p className={styles.text}>
+        Begin your journey with our <strong>Basic Yoga Package</strong>. It's the perfect first step to inner balance.
+      </p>
+      <button onClick={onScrollToProduct} className={styles.button}>
         Get the Basic Pack
-      </Link>
+      </button>
     </section>
   )
 }
 
 export default StoreCTA
+
