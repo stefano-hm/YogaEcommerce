@@ -16,7 +16,7 @@ function SuccessPage() {
   return (
     <>
       <Helmet>
-        <title>Success | Gianni's Yoga dApp</title>
+        <title>Success | Serenity Yoga</title>
         <meta
           name="description"
           content="Your purchase was successful. Thank you for supporting Gianni’s Yoga dApp."

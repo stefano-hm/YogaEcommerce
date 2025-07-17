@@ -12,7 +12,7 @@ function HomePage() {
   return (
     <>
       <Helmet>
-        <title>Home | Gianni's Yoga dApp</title>
+        <title>Home | Serenity Yoga</title>
         <meta
           name="description"
           content="Buy exclusive yoga products and pay securely with ETH on Gianni's decentralized app."

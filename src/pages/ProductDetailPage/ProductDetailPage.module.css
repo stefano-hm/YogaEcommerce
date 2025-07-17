@@ -1,24 +1,30 @@
 .page {
   display: flex;
   justify-content: center;
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  min-height: 100vh;
 }
 
 .card {
   max-width: 600px;
   width: 100%;
-  background-color: #ffffff;
-  border-radius: 1rem;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   padding: 2rem;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  transition: var(--transition);
 }
 
 .price {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: #4b5563; 
-  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 1rem;
+  text-align: right;
 }
+

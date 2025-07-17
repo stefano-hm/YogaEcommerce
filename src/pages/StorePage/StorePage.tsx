@@ -16,7 +16,7 @@ function StorePage() {
   return (
     <>
       <Helmet>
-        <title>Store | Gianni's Yoga dApp</title>
+        <title>Store | Serenity Yoga</title>
         <meta
           name="description"
           content="Explore and purchase exclusive yoga packages by Gianni. Pay securely with ETH."
@@ -27,7 +27,7 @@ function StorePage() {
         <StoreIntro />
       </div>
       <div className={styles.container}>
-        <h2>Gianni’s Yoga Packages</h2>
+        <h2>Store</h2>
         <ProductGrid products={products} firstProductRef={firstProductRef} />
       </div>
       <div className={styles.container}>

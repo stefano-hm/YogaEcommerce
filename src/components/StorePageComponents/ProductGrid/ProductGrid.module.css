@@ -1,7 +1,8 @@
 .grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
-  justify-content: center;
-  margin-top: 2rem;
+  max-width: var(--max-width);
+  margin: 2rem auto;
+  padding: 0 var(--padding-container);
 }

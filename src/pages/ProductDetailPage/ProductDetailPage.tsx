@@ -48,7 +48,7 @@ function ProductDetailPage() {
   return (
     <>
       <Helmet>
-        <title>{product.title} | Gianni's Yoga dApp</title>
+        <title>{product.title} | Serenity Yoga</title>
         <meta name="description" content={product.description} />
       </Helmet>
 

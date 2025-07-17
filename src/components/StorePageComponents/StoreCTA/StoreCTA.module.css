@@ -1,34 +1,44 @@
 .cta {
-  background-color: #f4f8f7;
-  padding: 3rem 2rem;
+  max-width: var(--max-width);
+  margin: 3rem auto;
+  padding: var(--padding-container);
   text-align: center;
-  border-radius: 1rem;
-  margin-top: 4rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  background-color: var(--color-bg);
 }
 
 .title {
+  font-family: var(--font-heading);
   font-size: 1.75rem;
-  color: #1d4d3f;
-  margin-bottom: 0.5rem;
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .text {
-  font-size: 1.1rem;
-  color: #3a6752;
-  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  color: var(--color-muted);
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .button {
-  display: inline-block;
-  background-color: #1d4d3f;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  text-decoration: none;
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  padding: 0.75rem 2rem;
+  border-radius: var(--radius);
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
 }
 
-.button:hover {
-  background-color: #144232;
+.button:hover,
+.button:focus {
+  background-color: #333;
+  outline: none;
 }

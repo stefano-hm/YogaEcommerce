@@ -2,18 +2,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .image {
   width: 100%;
-  border-radius: 1rem;
+  max-height: 300px;
   object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
 }
 
 .title {
-  margin-top: 1rem;
+  font-family: var(--font-heading);
   font-size: 2rem;
   font-weight: 700;
-  color: #1f2937; 
+  color: var(--color-text);
   text-align: center;
 }

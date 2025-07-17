@@ -1,25 +1,28 @@
 .about {
-  padding: 4rem 2rem;
-  background-color: #ffffff;
-  color: #3c3c3c;
+  width: 100%;
+  padding: 6rem 2rem;
+  color: #000000;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 720px;
   margin: 0 auto;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 
 .heading {
   font-size: 2rem;
   font-weight: 600;
-  margin-bottom: 1.5rem;
-  color: #2d2d2d;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .text {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin-bottom: 1rem;
-  color: #5a5a5a;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #333333;
+  font-family: 'Inter', sans-serif;
+  text-align: justify;
 }

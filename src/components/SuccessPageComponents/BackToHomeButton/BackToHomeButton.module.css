@@ -2,17 +2,23 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background-color: #fef9f6;
-  color: #1e293b;
-  border: 2px solid #e2e8f0;
-  border-radius: 999px;
+  padding: 0.5rem 1rem;
+  background-color: transparent;
+  border: 2px solid var(--color-text);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
-  font-weight: 500;
-  transition: all 0.2s ease;
+  user-select: none;
 }
 
-.button:hover {
-  background-color: #f3f4f6;
-  border-color: #cbd5e1;
+.button:hover,
+.button:focus {
+  background-color: var(--color-text);
+  color: var(--color-bg);
+  outline: none;
 }
+
