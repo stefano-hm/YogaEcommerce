@@ -19,7 +19,7 @@
     "react-hot-toast": "^2.5.2",
     "react-router-dom": "^7.6.3",
     "viem": "^2.31.6",
-    "wagmi": "^2.15.6"
+    "wagmi": "^2.16.0"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.0",
