@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { Suspense, lazy } from 'react'
 
 import Navbar from './components/Navbar/Navbar'
@@ -11,16 +11,19 @@ const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage/ProductDe
 const SuccessPage = lazy(() => import('./pages/SuccessPage/SuccessPage'))
 
 function App() {
+  const location = useLocation()
+  const isSuccessPage = location.pathname === '/success'
+
   return (
     <div>
-      <Navbar />
+      {!isSuccessPage && <Navbar />}
       <ScrollToTop />
       <main>
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/store" element={<StorePage />} />
-             <Route path="/store/:slug" element={<ProductDetailPage />} />
+            <Route path="/store/:slug" element={<ProductDetailPage />} />
             <Route path="/success" element={<SuccessPage />} />
           </Routes>
         </Suspense>

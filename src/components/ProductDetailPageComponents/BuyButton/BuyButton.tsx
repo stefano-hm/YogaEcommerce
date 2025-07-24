@@ -3,19 +3,28 @@ import styles from './BuyButton.module.css'
 type Props = {
   onClick: () => void
   isLoading: boolean
+  disabled?: boolean
 }
 
-function BuyButton({ onClick, isLoading }: Props) {
+function BuyButton({ onClick, isLoading, disabled }: Props) {
+  const isDisabled = isLoading || disabled
+
+  let buttonText = 'Buy now'
+  if (isLoading) {
+    buttonText = 'Processing purchase...'
+  } else if (disabled) {
+    buttonText = 'Connect wallet first'
+  }
+
   return (
     <button
       onClick={onClick}
-      disabled={isLoading}
+      disabled={isDisabled}
       className={styles.button}
     >
-      {isLoading ? 'Processing purchase...' : 'Buy now'}
+      {buttonText}
     </button>
   )
 }
 
 export default BuyButton
-

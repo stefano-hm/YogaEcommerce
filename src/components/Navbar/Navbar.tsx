@@ -1,13 +1,13 @@
 import { NavLink } from 'react-router-dom'
 import { ConnectButton } from '@rainbow-me/rainbowkit'
 import styles from './Navbar.module.css'
-import logo from '../../../public/images/logo.png'
+import Logo from '../Logo/Logo'
 
 const Navbar: React.FC = () => {
   return (
     <nav className={styles.navbar}>
       <NavLink to="/" className={styles.logoLink}>
-        <img src={logo} alt="Pranava Flow logo" className={styles.logo} />
+        <Logo />
       </NavLink>
       <div className={styles.links}>
         <NavLink to="/" className={({ isActive }) => (isActive ? styles.active : '')} end>
@@ -23,4 +23,3 @@ const Navbar: React.FC = () => {
 }
 
 export default Navbar
-

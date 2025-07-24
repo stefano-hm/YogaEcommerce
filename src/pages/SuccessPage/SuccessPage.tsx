@@ -5,6 +5,7 @@ import styles from './SuccessPage.module.css'
 import PurchaseDetails from '../../components/SuccessPageComponents/PurchaseDetails/PurchaseDetails'
 import BackToHomeButton from '../../components/SuccessPageComponents/BackToHomeButton/BackToHomeButton'
 import GoToStoreButton from '../../components/SuccessPageComponents/GoToStoreButton/GoToStoreButton'
+import Logo from '../../components/Logo/Logo'
 
 function SuccessPage() {
   const location = useLocation()
@@ -22,6 +23,10 @@ function SuccessPage() {
           content="Your purchase was successful. Thank you for supporting Gianni’s Yoga dApp."
         />
       </Helmet>
+
+      <header className={styles.header}>
+        <Logo />
+      </header>
 
       <main className={styles.page}>
         <div className={styles.section}>

@@ -6,6 +6,7 @@ import toast from 'react-hot-toast'
 import { useState } from 'react'
 
 import { products } from '../../data/productsData'
+import BackToStoreLink from '../../components/ProductDetailPageComponents/BackToStoreLink/BackToStoreLink'
 import ProductHeader from '../../components/ProductDetailPageComponents/ProductHeader/ProductHeader'
 import ProductDescription from '../../components/ProductDetailPageComponents/ProductDescription/ProductDescription'
 import BuyButton from '../../components/ProductDetailPageComponents/BuyButton/BuyButton'
@@ -23,7 +24,6 @@ function ProductDetailPage() {
 
   const handleBuy = async () => {
     if (!isConnected) {
-      toast.error('Please connect your wallet to proceed.')
       return
     }
 
@@ -38,8 +38,16 @@ function ProductDetailPage() {
       toast.success('Purchase successful!', { duration: 8000 })
 
       navigate('/success', { state: { product, txHash: hash } })
-    } catch (err) {
-      toast.error('Payment failed.')
+    } catch (err: any) {
+      const msg = err?.shortMessage || err?.message || ''
+
+      if (msg.includes('User rejected')) {
+        toast.error('Transaction rejected by user.')
+      } else if (msg.toLowerCase().includes('insufficient funds')) {
+        toast.error('Insufficient funds in your wallet.')
+      } else {
+        toast.error('Payment failed.')
+      }
     } finally {
       setIsLoading(false)
     }
@@ -53,6 +61,9 @@ function ProductDetailPage() {
       </Helmet>
 
       <main className={styles.page}>
+        <div className={styles.backWrapper}>
+          <BackToStoreLink />
+        </div>
         <div className={styles.card}>
           <ProductHeader title={product.title} imageUrl={product.imageUrl} />
           <ProductDescription fullText={product.fullText} />
@@ -60,6 +71,7 @@ function ProductDetailPage() {
           <BuyButton
             onClick={handleBuy}
             isLoading={isLoading}
+            disabled={!isConnected}
           />
         </div>
       </main>

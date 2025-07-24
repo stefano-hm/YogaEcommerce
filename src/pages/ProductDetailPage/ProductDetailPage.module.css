@@ -1,5 +1,7 @@
 .page {
   display: flex;
+  flex-direction: column; /* 👈 aggiunto */
+  align-items: center; 
   justify-content: center;
   padding: 3rem 1rem;
   background-color: var(--color-bg);
@@ -18,6 +20,13 @@
   flex-direction: column;
   gap: 1.5rem;
   transition: var(--transition);
+}
+
+.backWrapper {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .price {
