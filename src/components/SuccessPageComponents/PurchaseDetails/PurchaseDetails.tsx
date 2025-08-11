@@ -7,7 +7,7 @@ type Props = {
   chainId?: number
 }
 
-function getExplorerUrl(chainId?: number): string {
+const getExplorerUrl = (chainId?: number): string => {
   switch (chainId) {
     case 1:
       return 'https://etherscan.io/tx/'

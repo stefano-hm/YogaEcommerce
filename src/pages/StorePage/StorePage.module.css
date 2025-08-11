@@ -14,9 +14,6 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-/* Aggiungo un piccolo reset per le sezioni con container */
 div[class*="container"]:not(:last-child) {
   margin-bottom: 3rem;
 }
-
-

@@ -6,7 +6,7 @@ type Props = {
   disabled?: boolean
 }
 
-function BuyButton({ onClick, isLoading, disabled }: Props) {
+const BuyButton = ({ onClick, isLoading, disabled }: Props) => {
   const isDisabled = isLoading || disabled
 
   let buttonText = 'Buy now'

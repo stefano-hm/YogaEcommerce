@@ -3,6 +3,7 @@
   padding: 6rem 2rem;
   background-color: #ffffff;
   color: #000000;
+  box-sizing: border-box;
 }
 
 .container {

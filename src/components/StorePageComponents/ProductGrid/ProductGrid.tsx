@@ -8,7 +8,7 @@ type ProductGridProps = {
   firstProductRef?: RefObject<HTMLDivElement>
 }
 
-function ProductGrid({ products, firstProductRef }: ProductGridProps) {
+const ProductGrid = ({ products, firstProductRef }: ProductGridProps) => {
   return (
     <div className={styles.grid}>
       {products.map((product, index) => (

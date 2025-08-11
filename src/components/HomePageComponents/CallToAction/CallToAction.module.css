@@ -4,6 +4,7 @@
   background-color: #000000;
   color: #ffffff;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .container {

@@ -12,7 +12,7 @@ import ProductDescription from '../../components/ProductDetailPageComponents/Pro
 import BuyButton from '../../components/ProductDetailPageComponents/BuyButton/BuyButton'
 import styles from './ProductDetailPage.module.css'
 
-function ProductDetailPage() {
+const ProductDetailPage = () => {
   const { slug } = useParams<{ slug: string }>()
   const navigate = useNavigate()
   const [isLoading, setIsLoading] = useState(false)

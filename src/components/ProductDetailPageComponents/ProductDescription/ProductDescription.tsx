@@ -4,7 +4,7 @@ type Props = {
   fullText: string
 }
 
-function ProductDescription({ fullText }: Props) {
+const ProductDescription = ({ fullText }: Props) => {
   return (
     <div className={styles.container}>
       <p>{fullText}</p>

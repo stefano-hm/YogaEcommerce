@@ -10,7 +10,7 @@ const StorePage = lazy(() => import('./pages/StorePage/StorePage'))
 const ProductDetailPage = lazy(() => import('./pages/ProductDetailPage/ProductDetailPage'))
 const SuccessPage = lazy(() => import('./pages/SuccessPage/SuccessPage'))
 
-function App() {
+const App = () => {
   const location = useLocation()
   const isSuccessPage = location.pathname === '/success'
 

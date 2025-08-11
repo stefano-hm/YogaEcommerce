@@ -1,7 +1,7 @@
 import { CheckCircle2 } from 'lucide-react'
 import styles from './SuccessMessage.module.css'
 
-function SuccessMessage() {
+const SuccessMessage = () => {
   return (
     <div className={styles.container}>
       <CheckCircle2 className={styles.icon} />

@@ -4,7 +4,7 @@ type StoreCTAProps = {
   onScrollToProduct: () => void
 }
 
-function StoreCTA({ onScrollToProduct }: StoreCTAProps) {
+const StoreCTA = ({ onScrollToProduct }: StoreCTAProps) => {
   return (
     <section className={styles.cta}>
       <h3 className={styles.title}>Just starting out?</h3>

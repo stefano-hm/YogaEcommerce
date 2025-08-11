@@ -6,6 +6,15 @@
   padding: 1.2rem 2rem;
   border-bottom: 1px solid #e5e5e5;
   background-color: #ffffff;
+  position: relative;
+  z-index: 100;
+}
+
+.desktopMenu {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  justify-content: center;
 }
 
 .logoLink {
@@ -14,12 +23,53 @@
   text-decoration: none;
 }
 
-.links {
-  display: flex;
-  gap: 1.5rem;
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #000;
+  z-index: 102;
 }
 
-.links a {
+.connectWrapper-standard-button {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.connectWrapper {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .connectWrapper {
+    margin-left: 0;
+  }
+
+  .desktopMenu {
+    display: none;
+  }
+
+  .connectWrapper-standard-button {
+    font-size: 0.85rem;
+    padding: 0.35rem 0.8rem;
+  }
+}
+
+.links a,
+.mobileNav a {
   font-size: 1rem;
   color: #1a1a1a;
   text-decoration: none;
@@ -27,7 +77,8 @@
   transition: color 0.2s ease;
 }
 
-.links a:hover {
+.links a:hover,
+.mobileNav a:hover {
   color: #000000;
 }
 
@@ -44,4 +95,52 @@
   width: 100%;
   height: 2px;
   background-color: #000000;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 101;
+  transition: opacity 0.3s ease;
+}
+
+.mobileMenu.open {
+  display: flex;
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@media (max-width: 480px) {
+  .connectWrapper-standard-button {
+    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem;
+  }
 }

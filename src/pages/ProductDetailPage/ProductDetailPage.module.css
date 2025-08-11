@@ -20,6 +20,7 @@
   flex-direction: column;
   gap: 1.5rem;
   transition: var(--transition);
+  box-sizing: border-box;
 }
 
 .backWrapper {

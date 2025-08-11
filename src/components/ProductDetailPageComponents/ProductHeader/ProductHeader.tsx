@@ -5,7 +5,7 @@ type Props = {
   imageUrl: string
 }
 
-function ProductHeader({ title, imageUrl }: Props) {
+const ProductHeader = ({ title, imageUrl }: Props) => {
   return (
     <div className={styles.container}>
       <img src={imageUrl} alt={title} className={styles.image} />

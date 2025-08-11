@@ -8,7 +8,7 @@ import BenefitsSection from '../../components/HomePageComponents/BenefitsSection
 import CallToAction from '../../components/HomePageComponents/CallToAction/CallToAction'
 
 
-function HomePage() {
+const HomePage = () => {
   return (
     <>
       <Helmet>

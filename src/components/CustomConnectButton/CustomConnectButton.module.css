@@ -1,0 +1,75 @@
+.button {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.desktopWrapper {
+  display: flex;
+  gap: 10px;
+}
+
+.chainButton,
+.accountButton {
+  padding: 8px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.chainButton:hover,
+.accountButton:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.mobileWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-end;
+}
+
+.mobileButton {
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.mobileButton:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+@media (max-width: 480px) {
+  .mobileButton {
+    padding: 4px 8px;
+    font-size: 11px;
+  }
+}
+
+.icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: middle;
+}

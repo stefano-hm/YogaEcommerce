@@ -10,7 +10,7 @@ import BackToHomeButton from '../../components/SuccessPageComponents/BackToHomeB
 import GoToStoreButton from '../../components/SuccessPageComponents/GoToStoreButton/GoToStoreButton'
 import Logo from '../../components/Logo/Logo'
 
-function SuccessPage() {
+const SuccessPage = () => {
   const location = useLocation()
   const { product, txHash } = location.state || {}
   const { chain } = useAccount()

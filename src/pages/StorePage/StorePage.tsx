@@ -6,7 +6,7 @@ import StoreIntro from '../../components/StorePageComponents/StoreIntro/StoreInt
 import ProductGrid from '../../components/StorePageComponents/ProductGrid/ProductGrid'
 import StoreCTA from '../../components/StorePageComponents/StoreCTA/StoreCTA'
 
-function StorePage() {
+const StorePage = () => {
   const firstProductRef = useRef<HTMLDivElement>(null)
 
   function handleScrollToProduct() {
