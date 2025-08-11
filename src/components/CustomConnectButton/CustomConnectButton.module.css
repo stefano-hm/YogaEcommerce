@@ -6,7 +6,9 @@
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .button:hover {
@@ -28,7 +30,9 @@
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .chainButton:hover,
@@ -52,7 +56,9 @@
   background-color: #000000;
   color: #ffffff;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
+  transition:
+    background-color 0.2s,
+    color 0.2s;
 }
 
 .mobileButton:hover {

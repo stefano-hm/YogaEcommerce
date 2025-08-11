@@ -3,7 +3,8 @@ import styles from './BenefitsSection.module.css'
 const benefits = [
   {
     title: 'Tailored Yoga Packages',
-    description: 'Authentic, high-quality yoga experiences crafted for beginners and advanced practitioners.',
+    description:
+      'Authentic, high-quality yoga experiences crafted for beginners and advanced practitioners.',
   },
   {
     title: 'Secure ETH Payments',
@@ -19,8 +20,9 @@ const benefits = [
   },
   {
     title: 'Simple & Intuitive',
-    description: 'Our platform is designed to be clean and user-friendly, so you can focus on your practice.',
-  }
+    description:
+      'Our platform is designed to be clean and user-friendly, so you can focus on your practice.',
+  },
 ]
 
 const BenefitsSection = () => {

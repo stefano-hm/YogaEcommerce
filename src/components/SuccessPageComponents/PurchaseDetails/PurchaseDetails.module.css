@@ -10,7 +10,7 @@ strong {
 }
 
 .link {
-  color: #1a73e8; /* blu web standard, richiama i link moderni */
+  color: #1a73e8;
   text-decoration: underline;
   transition: color 0.2s ease;
   cursor: pointer;

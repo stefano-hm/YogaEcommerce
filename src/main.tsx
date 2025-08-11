@@ -12,7 +12,6 @@ import App from './App.tsx'
 import { config } from './wagmi.ts'
 import ToastProvider from './components/ToastProvider/ToastProvider'
 
-
 import '@rainbow-me/rainbowkit/styles.css'
 import './index.css'
 

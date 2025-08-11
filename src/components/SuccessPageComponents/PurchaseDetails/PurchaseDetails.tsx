@@ -20,7 +20,7 @@ const getExplorerUrl = (chainId?: number): string => {
     case 80001:
       return 'https://mumbai.polygonscan.com/tx/'
     default:
-      return 'https://etherscan.io/tx/' // fallback sicuro
+      return 'https://etherscan.io/tx/'
   }
 }
 
@@ -34,7 +34,8 @@ function PurchaseDetails({ productTitle, price, txHash, chainId }: Props) {
   return (
     <>
       <p>
-        You've successfully purchased <strong>{productTitle}</strong> for <strong>{price} ETH</strong>.
+        You've successfully purchased <strong>{productTitle}</strong> for{' '}
+        <strong>{price} ETH</strong>.
       </p>
       {txHash && (
         <p>

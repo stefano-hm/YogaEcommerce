@@ -17,7 +17,7 @@
 .overlay {
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.6); /* overlay chiaro */
+  background: rgba(255, 255, 255, 0.6);
   backdrop-filter: blur(4px);
   display: flex;
   align-items: center;

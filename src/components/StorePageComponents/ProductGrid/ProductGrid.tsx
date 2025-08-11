@@ -21,4 +21,3 @@ const ProductGrid = ({ products, firstProductRef }: ProductGridProps) => {
 }
 
 export default ProductGrid
-

@@ -7,7 +7,6 @@ import HowItWorksSection from '../../components/HomePageComponents/HowItWorksSec
 import BenefitsSection from '../../components/HomePageComponents/BenefitsSection/BenefitsSection'
 import CallToAction from '../../components/HomePageComponents/CallToAction/CallToAction'
 
-
 const HomePage = () => {
   return (
     <>
@@ -41,4 +40,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-

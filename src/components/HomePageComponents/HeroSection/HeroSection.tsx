@@ -7,7 +7,8 @@ const HeroSection = () => {
         <div className={styles.content}>
           <h2 className={styles.title}>Welcome to Serenity Yoga</h2>
           <p className={styles.subtitle}>
-            Discover a new way to practice yoga. Buy exclusive digital packages and pay securely with ETH.
+            Discover a new way to practice yoga. Buy exclusive digital packages and pay securely
+            with ETH.
           </p>
         </div>
       </div>

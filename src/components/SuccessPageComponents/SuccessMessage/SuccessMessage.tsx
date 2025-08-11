@@ -6,7 +6,9 @@ const SuccessMessage = () => {
     <div className={styles.container}>
       <CheckCircle2 className={styles.icon} />
       <h2 className={styles.title}>Thank you for your purchase!</h2>
-      <p className={styles.subtitle}>Your payment in ETH was successful. We truly appreciate your support.</p>
+      <p className={styles.subtitle}>
+        Your payment in ETH was successful. We truly appreciate your support.
+      </p>
     </div>
   )
 }

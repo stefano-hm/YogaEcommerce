@@ -15,4 +15,3 @@ const ProductHeader = ({ title, imageUrl }: Props) => {
 }
 
 export default ProductHeader
-

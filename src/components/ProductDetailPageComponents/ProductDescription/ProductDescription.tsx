@@ -13,4 +13,3 @@ const ProductDescription = ({ fullText }: Props) => {
 }
 
 export default ProductDescription
-

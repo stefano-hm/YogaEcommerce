@@ -1,5 +1,5 @@
 :root {
-  --font-heading: 'Inter', sans-serif; 
+  --font-heading: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
 
   --color-bg: #ffffff;
@@ -22,13 +22,13 @@ body {
   color: var(--color-text);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; 
+  -moz-osx-font-smoothing: grayscale;
 }
 
 a {
   color: inherit;
   text-decoration: none;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
 button {
@@ -36,5 +36,3 @@ button {
   cursor: pointer;
   border: none;
 }
-
-

@@ -17,11 +17,7 @@ const BuyButton = ({ onClick, isLoading, disabled }: Props) => {
   }
 
   return (
-    <button
-      onClick={onClick}
-      disabled={isDisabled}
-      className={styles.button}
-    >
+    <button onClick={onClick} disabled={isDisabled} className={styles.button}>
       {buttonText}
     </button>
   )

@@ -14,6 +14,6 @@ h2 {
   padding-bottom: 0.5rem;
 }
 
-div[class*="container"]:not(:last-child) {
+div[class*='container']:not(:last-child) {
   margin-bottom: 3rem;
 }

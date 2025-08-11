@@ -15,7 +15,7 @@ type Props = {
 
 const ProductCard = ({ product }: Props) => {
   return (
-    <div 
+    <div
       className={styles.card}
       id={product.title.toLowerCase().includes('basic') ? 'basic' : undefined}
     >

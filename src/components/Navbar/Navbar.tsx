@@ -9,7 +9,7 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => {
-    setMenuOpen(prev => !prev)
+    setMenuOpen((prev) => !prev)
   }
 
   const closeMenu = () => {
@@ -45,10 +45,19 @@ const Navbar = () => {
 
       <div className={`${styles.mobileMenu} ${menuOpen ? `${styles.open} ${styles.fadeIn}` : ''}`}>
         <nav className={styles.mobileNav}>
-          <NavLink to="/" onClick={closeMenu} className={({ isActive }) => (isActive ? styles.active : '')} end>
+          <NavLink
+            to="/"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? styles.active : '')}
+            end
+          >
             Home
           </NavLink>
-          <NavLink to="/store" onClick={closeMenu} className={({ isActive }) => (isActive ? styles.active : '')}>
+          <NavLink
+            to="/store"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? styles.active : '')}
+          >
             Store
           </NavLink>
         </nav>

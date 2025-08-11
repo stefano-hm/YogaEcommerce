@@ -68,11 +68,7 @@ const ProductDetailPage = () => {
           <ProductHeader title={product.title} imageUrl={product.imageUrl} />
           <ProductDescription fullText={product.fullText} />
           <p className={styles.price}>{product.priceEth} ETH</p>
-          <BuyButton
-            onClick={handleBuy}
-            isLoading={isLoading}
-            disabled={!isConnected}
-          />
+          <BuyButton onClick={handleBuy} isLoading={isLoading} disabled={!isConnected} />
         </div>
       </main>
     </>
