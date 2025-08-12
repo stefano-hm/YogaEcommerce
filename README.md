@@ -158,15 +158,15 @@ Displays transaction details with a direct link to **Etherscan**, plus navigatio
 - Try with insufficient funds (error toast).
 
 ## Known Issues & Limitations
-No backend integration: all products are static.
+ 
+- No backend integration: all products are static.
+- Only ETH payments are supported.
+- User must manually switch to the correct network (Mainnet or Sepolia).
 
-Only ETH payments are supported.
+## Author
 
-User must manually switch to the correct network (Mainnet or Sepolia).
+Developed by Stefano Benedet For educational and portfolio purposes.
+Feel free to fork, contribute, or get inspired for your own decentralized travel projects.
 
-9. Contact & Links
-Repository: <repository-url>
-Author: John's Yoga Studio Project Team
-Live Demo: (if hosted, add link here)
 
 
