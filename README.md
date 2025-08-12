@@ -59,13 +59,15 @@ Serenity Yoga is an online store designed to help John, owner of a yoga studio, 
 
   ```bash
   # Clone the repository
-  git clone <repository-url>
+  git clone git clone https://github.com/stefano-hm/YogaEcommerce.git
+  cd yoga-ecommerce
 
   # Install dependencies
   npm install
 
   # Start development server
   npm run dev
+  ```
 
 Default development URL:
 http://localhost:5173
@@ -74,9 +76,97 @@ http://localhost:5173
 
   ```bash
   npm run build
+  ```
 
 **Preview production build**
 
   ```bash
   npm run preview
+  ```
+
+**Lint the code**
+
+  ```bash
+  npm run lint
+  ```
+
+## E-commerce Architecture & Flow
+
+The Serenity Yoga application is structured as a Single Page Application (SPA) with **four main pages**:
+
+- **Home Page**
+
+Brief project introduction with a call-to-action button to visit the store.
+
+- **Store Page**
+  
+Displays a grid of **6 yoga packages** with image, ETH price, and short description.
+Products are managed in local state and rendered via the ProductGrid component.
+
+- **Product Detail Page**
+  
+Shows detailed product info, full description, and a Buy button.
+The buy button is disabled until the wallet is connected.
+Purchases are processed via useSendTransaction from Wagmi, and upon success, the user is redirected to the **Success Page**.
+
+- **Success Page**
+Displays transaction details with a direct link to **Etherscan**, plus navigation buttons to return to the store or home.
+
+**Wallet & Payment Handling**
+
+- Wallet connection is handled by **RainbowKit**, supporting multiple providers.
+- Ethereum transactions are processed via Wagmi and Viem.
+- Payments can be made on **Mainnet** or **Sepolia** (test network).
+- Error handling for rejected transactions, insufficient funds, and other failures.
+
+## Key Features
+- **Wallet Connection** (MetaMask, Coinbase Wallet, Rainbow, WalletConnect)
+- **Product Catalog** (6 purchasable yoga packages)
+- **Detailed Product View** (image, price, description)
+- **ETH Payments** via connected wallet
+- **Real-time Transaction Feedback** with toast notifications
+- **Success Page** with transaction details & Etherscan link
+- **Responsive UI** for desktop & mobile
+
+## Project Structure (simplified)
+
+  ```bash
+  src/
+  components/     # Reusable UI components
+  pages/          # Page components (Home, Store, ProductDetail, Success)
+  data/           # Product data definitions
+  App.tsx         # Main app entry
+  main.tsx        # React entry point
+  ```
+
+## Manual Testing
+
+1. **Connect a Wallet** via the navbar button (MetaMask, Coinbase, Rainbow, WalletConnect).
+
+2. Navigate between **Home**, **Store**, and **Product Detail** pages.
+
+3. Try to purchase a product:
+
+- Ensure you have ETH on **Sepolia** or **Mainnet**.
+- Check toast notifications for success or failure.
+- Verify Etherscan link on **Success Page**.
+
+4. **Edge Cases**:
+
+- Attempt purchase with wallet disconnected (Buy button should be disabled).
+- Reject transaction in the wallet (error toast).
+- Try with insufficient funds (error toast).
+
+## Known Issues & Limitations
+No backend integration: all products are static.
+
+Only ETH payments are supported.
+
+User must manually switch to the correct network (Mainnet or Sepolia).
+
+9. Contact & Links
+Repository: <repository-url>
+Author: John's Yoga Studio Project Team
+Live Demo: (if hosted, add link here)
+
 
