@@ -96,21 +96,21 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 
 - **Home Page**
 
-Brief project introduction with a call-to-action button to visit the store.
+  Brief project introduction with a call-to-action button to visit the store.
 
 - **Store Page**
   
-Displays a grid of **6 yoga packages** with image, ETH price, and short description.
-Products are managed in local state and rendered via the ProductGrid component.
+  Displays a grid of **6 yoga packages** with image, ETH price, and short description.
+  Products are managed in local state and rendered via the ProductGrid component.
 
 - **Product Detail Page**
   
-Shows detailed product info, full description, and a Buy button.
-The buy button is disabled until the wallet is connected.
-Purchases are processed via useSendTransaction from Wagmi, and upon success, the user is redirected to the **Success Page**.
+  Shows detailed product info, full description, and a Buy button.
+  The buy button is disabled until the wallet is connected.
+  Purchases are processed via useSendTransaction from Wagmi, and upon success, the user is        redirected to the **Success Page**.
 
 - **Success Page**
-Displays transaction details with a direct link to **Etherscan**, plus navigation buttons to return to the store or home.
+  Displays transaction details with a direct link to **Etherscan**, plus navigation buttons to    return to the store or home.
 
 **Wallet & Payment Handling**
 
