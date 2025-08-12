@@ -8,6 +8,10 @@
 
 Serenity Yoga is an online store designed to help John, owner of a yoga studio, expand his business by selling yoga courses online. The e-commerce platform allows customers to purchase yoga packages using **Ethereum** after connecting their wallet. Wallet connection and payment processing are seamlessly integrated through **RainbowKit**, supporting MetaMask, Coinbase Wallet, Rainbow, and WalletConnect.
 
+## Homepage Preview
+
+<img width="1732" height="861" alt="image" src="https://github.com/user-attachments/assets/6bfb6054-9a93-4aa5-90a4-1c92ce6c8127" />
+
 ## Technologies Used
 
 **Frontend Framework & Languages**
