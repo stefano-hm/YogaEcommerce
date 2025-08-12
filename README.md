@@ -2,7 +2,7 @@
 
 ## Project Name & Description
 
-**Project Name:** Serenity Yoga (yoga-ecommerce)
+**Project Name:** Serenity Yoga (`yoga-ecommerce`)
 
 **Description:**
 
@@ -70,7 +70,7 @@ Serenity Yoga is an online store designed to help John, owner of a yoga studio, 
   ```
 
 Default development URL:
-http://localhost:5173
+`http://localhost:5173`
 
 **Build for production**
 
@@ -101,13 +101,13 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 - **Store Page**
   
   Displays a grid of **6 yoga packages** with image, ETH price, and short description.
-  Products are managed in local state and rendered via the ProductGrid component.
+  Products are managed in local state and rendered via the `ProductGrid` component.
 
 - **Product Detail Page**
   
   Shows detailed product info, full description, and a Buy button.
   The buy button is disabled until the wallet is connected.
-  Purchases are processed via useSendTransaction from Wagmi, and upon success, the user is        redirected to the **Success Page**.
+  Purchases are processed via `useSendTransaction` from Wagmi, and upon success, the user is      redirected to the **Success Page**.
 
 - **Success Page**
   Displays transaction details with a direct link to **Etherscan**, plus navigation buttons to    return to the store or home.
@@ -166,6 +166,7 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 ## Author
 
 Developed by Stefano Benedet For educational and portfolio purposes.
+
 Feel free to fork, contribute, or get inspired for your own decentralized travel projects.
 
 
