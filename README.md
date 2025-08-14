@@ -151,15 +151,15 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 
 3. Try to purchase a product:
 
-- Ensure you have ETH on **Sepolia** or **Mainnet**.
-- Check toast notifications for success or failure.
-- Verify Etherscan link on **Success Page**.
+ - Ensure you have ETH on **Sepolia** or **Mainnet**.
+ - Check toast notifications for success or failure.
+ - Verify Etherscan link on **Success Page**.
 
 4. **Edge Cases**:
 
-- Attempt purchase with wallet disconnected (Buy button should be disabled).
-- Reject transaction in the wallet (error toast).
-- Try with insufficient funds (error toast).
+ - Attempt purchase with wallet disconnected (Buy button should be disabled).
+ - Reject transaction in the wallet (error toast).
+ - Try with insufficient funds (error toast).
 
 ## Known Issues & Limitations
  
