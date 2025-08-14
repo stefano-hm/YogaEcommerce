@@ -114,6 +114,7 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
   Purchases are processed via `useSendTransaction` from Wagmi, and upon success, the user is      redirected to the **Success Page**.
 
 - **Success Page**
+  
   Displays transaction details with a direct link to **Etherscan**, plus navigation buttons to    return to the store or home.
 
 **Wallet & Payment Handling**
