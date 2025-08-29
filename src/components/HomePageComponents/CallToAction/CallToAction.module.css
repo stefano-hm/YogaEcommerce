@@ -5,36 +5,49 @@
   color: #ffffff;
   text-align: center;
   box-sizing: border-box;
+  display: flex;
+  justify-content: center;
 }
 
-.container {
+.card {
   max-width: 640px;
-  margin: 0 auto;
+  padding: 2.5rem 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .heading {
   font-size: 2rem;
   font-weight: 600;
   font-family: 'Inter', sans-serif;
+  color: #000000;
 }
 
 .text {
   font-size: 1rem;
   line-height: 1.6;
   font-family: 'Inter', sans-serif;
-  color: #e0e0e0;
+  color: #333333;
+  text-align: center;
 }
 
 .button {
   padding: 0.75rem 2rem;
   font-size: 1rem;
   font-weight: 500;
-  color: #000000;
-  background-color: #ffffff;
+  color: #ffffff;
+  background-color: #000000;
   border: none;
   border-radius: 0.25rem;
   text-decoration: none;
@@ -44,6 +57,6 @@
 }
 
 .button:hover {
-  background-color: #e0e0e0;
-  color: #000000;
+  background-color: #222222;
+  color: #ffffff;
 }

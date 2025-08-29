@@ -3,10 +3,10 @@ import styles from './AboutSection.module.css'
 const AboutSection = () => {
   return (
     <section className={styles.about}>
-      <div className={styles.container}>
+      <div className={styles.card}>
         <h3 className={styles.heading}>Yoga meets Web3</h3>
         <p className={styles.text}>
-          Gianni’s Yoga dApp brings together ancient wellness practices and modern decentralized
+          John’s Yoga dApp brings together ancient wellness practices and modern decentralized
           technology. Whether you're a curious beginner or a seasoned yogi, our courses are designed
           to elevate your practice — and you can pay securely with Ethereum.
         </p>

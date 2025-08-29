@@ -1,24 +1,22 @@
 import styles from './HowItWorksSection.module.css'
 
+const steps = [
+  { number: 1, text: "Select your favorite yoga package from our Store page." },
+  { number: 2, text: "Connect your Ethereum wallet securely with one click." },
+  { number: 3, text: "Complete the purchase using ETH and enjoy instant access." },
+]
+
 const HowItWorksSection = () => {
   return (
     <section className={styles.howItWorks}>
-      <div className={styles.container}>
-        <h3 className={styles.heading}>How It Works</h3>
-        <div className={styles.steps}>
-          <div className={styles.step}>
-            <span className={styles.number}>1</span>
-            <p>Select your favorite yoga package from our Store page.</p>
+      <h3 className={styles.heading}>How It Works</h3>
+      <div className={styles.steps}>
+        {steps.map((step) => (
+          <div key={step.number} className={styles.card}>
+            <span className={styles.number}>{step.number}</span>
+            <p className={styles.text}>{step.text}</p>
           </div>
-          <div className={styles.step}>
-            <span className={styles.number}>2</span>
-            <p>Connect your Ethereum wallet securely with one click.</p>
-          </div>
-          <div className={styles.step}>
-            <span className={styles.number}>3</span>
-            <p>Complete the purchase using ETH and enjoy instant access.</p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   )

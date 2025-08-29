@@ -15,18 +15,26 @@
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-  max-width: 720px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 960px;
   margin: 0 auto;
   padding: 0;
   list-style: none;
 }
 
-.item {
-  border-left: 2px solid #000000;
-  padding-left: 1.5rem;
+.card {
+  background-color: #f0ebe6;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 .title {

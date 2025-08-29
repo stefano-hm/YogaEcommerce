@@ -31,7 +31,7 @@ const BenefitsSection = () => {
       <h3 className={styles.heading}>Why Choose Serenity Yoga?</h3>
       <ul className={styles.list}>
         {benefits.map((benefit, index) => (
-          <li key={index} className={styles.item}>
+          <li key={index} className={styles.card}>
             <h4 className={styles.title}>{benefit.title}</h4>
             <p className={styles.description}>{benefit.description}</p>
           </li>
