@@ -8,8 +8,8 @@ import { WagmiProvider } from 'wagmi'
 import { RainbowKitProvider } from '@rainbow-me/rainbowkit'
 import { HelmetProvider } from 'react-helmet-async'
 
-import App from './App.tsx'
-import { config } from './wagmi.ts'
+import App from './App'
+import { config } from './wagmi'
 import ToastProvider from './components/ToastProvider/ToastProvider'
 
 import '@rainbow-me/rainbowkit/styles.css'
