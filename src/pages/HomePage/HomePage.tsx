@@ -1,4 +1,6 @@
 import { Helmet } from 'react-helmet-async'
+// @ts-ignore
+import { useAccount } from 'wagmi'
 import styles from './HomePage.module.css'
 
 import HeroSection from '../../components/HomePageComponents/HeroSection/HeroSection'
@@ -6,8 +8,11 @@ import AboutSection from '../../components/HomePageComponents/AboutSection/About
 import HowItWorksSection from '../../components/HomePageComponents/HowItWorksSection/HowItWorksSection'
 import BenefitsSection from '../../components/HomePageComponents/BenefitsSection/BenefitsSection'
 import CallToAction from '../../components/HomePageComponents/CallToAction/CallToAction'
+import PurchasedCoursesSection from '../../components/HomePageComponents/PurchasedCoursesSection/PurchasedCoursesSection'
 
 const HomePage = () => {
+  const { address } = useAccount()
+
   return (
     <>
       <Helmet>
@@ -31,6 +36,13 @@ const HomePage = () => {
         <div className={styles.section}>
           <HowItWorksSection />
         </div>
+
+        {address && (
+          <div className={styles.section}>
+            <PurchasedCoursesSection walletAddress={address} />
+          </div>
+        )}
+
         <div className={styles.section}>
           <CallToAction />
         </div>
