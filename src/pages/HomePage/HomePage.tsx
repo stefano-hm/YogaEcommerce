@@ -1,5 +1,5 @@
 import { Helmet } from 'react-helmet-async'
-// @ts-ignore
+
 import { useAccount } from 'wagmi'
 import styles from './HomePage.module.css'
 

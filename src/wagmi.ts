@@ -1,6 +1,6 @@
 import { getDefaultConfig } from '@rainbow-me/rainbowkit'
 import { mainnet, sepolia } from 'wagmi/chains'
-import { http } from 'wagmi'
+import { http } from 'viem'
 
 export const config = getDefaultConfig({
   appName: 'yoga-ecommerce',
