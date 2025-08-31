@@ -49,7 +49,6 @@ const PurchasedCoursesSection = ({ walletAddress }: PurchasedCoursesSectionProps
           <div key={product.slug} className={styles.card}>
             <img src={product.imageUrl} alt={product.title} />
             <h3>{product.title}</h3>
-            <p>{product.description}</p>
           </div>
         ))}
       </div>

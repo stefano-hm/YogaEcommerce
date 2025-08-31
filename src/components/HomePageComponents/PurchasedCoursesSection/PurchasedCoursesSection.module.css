@@ -4,14 +4,74 @@
 }
 
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4rem;
+  justify-content: flex-start;
 }
 
 .card {
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px; 
   text-align: center;
+}
+
+.card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.card h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.8rem;
+  margin: 0;
+  word-break: break-word;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card:hover img {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 70px;
+  }
+  .card img {
+    width: 70px;
+    height: 70px;
+  }
+  .card h3 {
+    font-size: 0.75rem;
+  }
+}
+
+
+@media (max-width: 480px) {
+  .grid {
+    justify-content: center; 
+    gap: 1rem;
+  }
+  .card {
+    flex-basis: 45%; 
+    width: auto;      
+    margin-bottom: 1rem;
+  }
+  .card img {
+    width: 55px;  
+    height: 55px;
+  }
+  .card h3 {
+    font-size: 0.7rem; 
+  }
 }
