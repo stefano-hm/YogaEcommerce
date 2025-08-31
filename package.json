@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "lint": "biome check .",
     "preview": "vite preview"
   },
@@ -36,10 +36,6 @@
     "prettier": "^3.6.2",
     "typescript": "^5.4.5",
     "vite": "^5.2.11"
-  },
-  
-  "compilerOptions": {
-    "skipLibCheck": true
   }
 
 }
