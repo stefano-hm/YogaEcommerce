@@ -1,6 +1,6 @@
 import { useParams, useNavigate } from 'react-router-dom'
 import { Helmet } from 'react-helmet-async'
-
+// @ts-ignore
 import { useSendTransaction, useAccount } from 'wagmi'
 import { parseEther } from 'viem'
 import toast from 'react-hot-toast'

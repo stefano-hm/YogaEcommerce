@@ -1,7 +1,7 @@
 import { Helmet } from 'react-helmet-async'
 import { useLocation } from 'react-router-dom'
 import styles from './SuccessPage.module.css'
-
+// @ts-ignore
 import { useAccount } from 'wagmi'
 import { Link } from 'react-router-dom'
 
