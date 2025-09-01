@@ -1,9 +1,9 @@
 import styles from './HowItWorksSection.module.css'
 
 const steps = [
-  { number: 1, text: "Select your favorite yoga package from our Store page." },
-  { number: 2, text: "Connect your Ethereum wallet securely with one click." },
-  { number: 3, text: "Complete the purchase using ETH and enjoy instant access." },
+  { number: 1, text: 'Select your favorite yoga package from our Store page.' },
+  { number: 2, text: 'Connect your Ethereum wallet securely with one click.' },
+  { number: 3, text: 'Complete the purchase using ETH and enjoy instant access.' },
 ]
 
 const HowItWorksSection = () => {

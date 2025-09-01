@@ -1,6 +1,7 @@
 p {
+  font-family: var(--font-body);
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--color-text);
   margin-bottom: 1rem;
 }
@@ -10,7 +11,7 @@ strong {
 }
 
 .link {
-  color: #1a73e8;
+  color: var(--color-primary);
   text-decoration: underline;
   transition: color 0.2s ease;
   cursor: pointer;
@@ -18,6 +19,6 @@ strong {
 
 .link:hover,
 .link:focus {
-  color: #155ab6;
+  color: var(--color-primary-dark);
   outline: none;
 }

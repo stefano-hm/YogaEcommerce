@@ -1,7 +1,6 @@
 .cta {
   width: 100%;
   padding: 6rem 2rem;
-  background-color: #000000;
   color: #ffffff;
   text-align: center;
   box-sizing: border-box;
@@ -11,52 +10,56 @@
 
 .card {
   max-width: 640px;
-  padding: 2.5rem 2rem;
-  background-color: #ffffff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 3rem 2.5rem;
+  background-color: var(--color-primary);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
 .heading {
   font-size: 2rem;
-  font-weight: 600;
-  font-family: 'Inter', sans-serif;
-  color: #000000;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: #ffffff;
 }
 
 .text {
   font-size: 1rem;
   line-height: 1.6;
-  font-family: 'Inter', sans-serif;
-  color: #333333;
+  font-family: var(--font-body);
+  color: #e0f7f3;
   text-align: center;
 }
 
 .button {
   padding: 0.75rem 2rem;
   font-size: 1rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: #000000;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: #ffffff;
   border: none;
-  border-radius: 0.25rem;
+  border-radius: var(--radius);
   text-decoration: none;
   transition:
     background-color 0.2s ease,
-    color 0.2s ease;
+    color 0.2s ease,
+    transform 0.2s ease;
 }
 
 .button:hover {
-  background-color: #222222;
-  color: #ffffff;
+  background-color: #e0f7f3;
+  transform: translateY(-2px);
 }

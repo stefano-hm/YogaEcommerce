@@ -3,24 +3,25 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: var(--color-text);
-  color: var(--color-bg);
-  border: 2px solid var(--color-text);
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
+  border: 2px solid var(--color-primary);
   border-radius: var(--radius);
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+  transition: var(--transition);
   text-decoration: none;
   user-select: none;
+  box-shadow: var(--shadow);
 }
 
 .button:hover,
 .button:focus {
-  background-color: transparent;
-  color: var(--color-text);
+  background-color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: var(--color-text-light);
   outline: none;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }

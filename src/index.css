@@ -2,8 +2,14 @@
   --font-heading: 'Inter', sans-serif;
   --font-body: 'Inter', sans-serif;
 
+  --color-primary: #4fb6a3;
+  --color-primary-dark: #3d9589;
+  --color-primary-light: #e0f7f3;
+
   --color-bg: #ffffff;
+  --color-bg-alt: #f9f9f9;
   --color-text: #111111;
+  --color-text-light: #ffffff;
   --color-muted: #666666;
 
   --padding-container: 2rem;
@@ -23,16 +29,27 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-  color: inherit;
+  color: var(--color-primary);
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-primary-dark);
 }
 
 button {
   font-family: inherit;
   cursor: pointer;
   border: none;
+  background: none;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
 }

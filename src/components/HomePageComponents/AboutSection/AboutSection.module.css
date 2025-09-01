@@ -1,7 +1,7 @@
 .about {
   width: 100%;
   padding: 6rem 2rem;
-  color: #000000;
+  color: var(--color-text);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -10,13 +10,15 @@
 .card {
   max-width: 720px;
   padding: 2.5rem 2rem;
-  background-color: #f0ebe6;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  background-color: var(--color-bg-alt); /* sfondo leggermente diverso dal bianco */
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .card:hover {
@@ -28,17 +30,16 @@
   font-size: 2rem;
   font-weight: 600;
   text-align: center;
-  font-family: 'Inter', sans-serif;
+  font-family: var(--font-heading);
 }
 
 .text {
   font-size: 1rem;
   line-height: 1.7;
-  color: #333333;
-  font-family: 'Inter', sans-serif;
+  color: var(--color-muted);
+  font-family: var(--font-body);
   text-align: justify;
 }
-
 
 @media (max-width: 768px) {
   .about {

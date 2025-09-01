@@ -1,45 +1,40 @@
-import { useEffect, useState } from "react";
-import { getPurchases } from "../../../api";
-import { products } from "../../../data/productsData";
-import styles from "./PurchasedCoursesSection.module.css";
+import { useEffect, useState } from 'react'
+import { getPurchases } from '../../../api'
+import { products } from '../../../data/productsData'
+import styles from './PurchasedCoursesSection.module.css'
 
 interface PurchasedCoursesSectionProps {
-  walletAddress: string;
+  walletAddress: string
 }
 
 const PurchasedCoursesSection = ({ walletAddress }: PurchasedCoursesSectionProps) => {
-  const [purchased, setPurchased] = useState<string[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
+  const [purchased, setPurchased] = useState<string[]>([])
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    if (!walletAddress) return;
+    if (!walletAddress) return
 
-    setLoading(true);
-    setError(null);
+    setLoading(true)
+    setError(null)
 
     getPurchases(walletAddress)
       .then((data) => {
-  
-        const slugs = data.map((item: any) =>
-          typeof item === "string" ? item : item.slug
-        );
-        setPurchased(slugs);
+        const slugs = data.map((item: any) => (typeof item === 'string' ? item : item.slug))
+        setPurchased(slugs)
       })
       .catch((err) => {
-        console.error("[PurchasedCoursesSection] Error retrieving purchases:", err);
-        setError("Unable to load purchases");
+        console.error('[PurchasedCoursesSection] Error retrieving purchases:', err)
+        setError('Unable to load purchases')
       })
-      .finally(() => setLoading(false));
-  }, [walletAddress]);
+      .finally(() => setLoading(false))
+  }, [walletAddress])
 
-  const purchasedProducts = products.filter((product) =>
-    purchased.includes(product.slug)
-  );
+  const purchasedProducts = products.filter((product) => purchased.includes(product.slug))
 
-  if (loading) return <p>Loading purchases...</p>;
-  if (error) return <p>{error}</p>;
-  if (purchasedProducts.length === 0) return null;
+  if (loading) return <p>Loading purchases...</p>
+  if (error) return <p>{error}</p>
+  if (purchasedProducts.length === 0) return null
 
   return (
     <section className={styles.purchasedSection}>
@@ -53,7 +48,7 @@ const PurchasedCoursesSection = ({ walletAddress }: PurchasedCoursesSectionProps
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default PurchasedCoursesSection;
+export default PurchasedCoursesSection

@@ -1,6 +1,6 @@
 .intro {
   max-width: var(--max-width);
-  margin: 0 auto 3rem;
+  margin: 0 auto 4rem; /* leggermente più spazio sotto per uniformità */
   padding: var(--padding-container);
   text-align: center;
 }
@@ -9,15 +9,15 @@
   font-family: var(--font-heading);
   font-weight: 700;
   font-size: 2.5rem;
-  color: var(--color-text);
-  margin-bottom: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
 }
 
 .text {
   font-family: var(--font-body);
   font-size: 1.125rem;
-  color: var(--color-muted);
-  line-height: 1.5;
+  color: var(--color-text);
+  line-height: 1.6;
   max-width: 700px;
   margin: 0 auto;
 }

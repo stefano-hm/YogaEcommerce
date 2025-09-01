@@ -5,4 +5,5 @@
   max-width: var(--max-width);
   margin: 2rem auto;
   padding: 0 var(--padding-container);
+  background-color: var(--color-bg);
 }

@@ -19,7 +19,7 @@ const ProductDetailPage = () => {
   const navigate = useNavigate()
   const [isLoading, setIsLoading] = useState(false)
   const { sendTransactionAsync } = useSendTransaction()
-  const { isConnected, address } = useAccount() 
+  const { isConnected, address } = useAccount()
 
   const product = products.find((p) => p.slug === slug)
   if (!product) return <div style={{ padding: '2rem' }}>Product not found</div>

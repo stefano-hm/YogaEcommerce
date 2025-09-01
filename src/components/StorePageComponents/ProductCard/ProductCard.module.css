@@ -2,8 +2,8 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-alt); /* sfondo alternativo coerente */
+  border: 1px solid #e0e0e0; /* fallback, eventualmente puoi creare --color-border */
   border-radius: var(--radius);
   padding: 1rem;
   transition:
@@ -13,7 +13,7 @@
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* leggermente più soft del precedente */
 }
 
 .image {
@@ -29,6 +29,7 @@
   font-weight: 600;
   margin-bottom: 0.5rem;
   color: var(--color-text);
+  font-family: var(--font-heading);
 }
 
 .description {
@@ -36,6 +37,7 @@
   color: var(--color-muted);
   margin-bottom: 1rem;
   flex-grow: 1;
+  font-family: var(--font-body);
 }
 
 .price {
@@ -48,20 +50,19 @@
 .buyButton {
   display: inline-block;
   padding: 0.5rem 1rem;
-  background-color: var(--color-text);
-  color: var(--color-bg);
+  background-color: var(--color-primary);
+  color: var(--color-text-light);
   text-align: center;
   font-weight: 600;
   border-radius: var(--radius);
   text-decoration: none;
-  transition:
-    background-color 0.2s ease,
-    color 0.2s ease;
+  transition: var(--transition);
+  border: 2px solid transparent;
 }
 
 .buyButton:hover,
 .buyButton:focus {
-  background-color: transparent;
-  color: var(--color-text);
-  border: 2px solid var(--color-text);
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  border-color: var(--color-primary-dark);
 }
