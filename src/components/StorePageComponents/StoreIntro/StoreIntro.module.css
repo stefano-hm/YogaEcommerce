@@ -1,6 +1,6 @@
 .intro {
   max-width: var(--max-width);
-  margin: 0 auto 4rem; /* leggermente più spazio sotto per uniformità */
+  margin: 0 auto 4rem;
   padding: var(--padding-container);
   text-align: center;
 }

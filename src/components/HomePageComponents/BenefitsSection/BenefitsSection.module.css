@@ -1,9 +1,10 @@
 .benefits {
   width: 100%;
-  padding: 6rem 2rem;
+  padding: 4rem 2rem;
   background-color: var(--color-bg);
   color: var(--color-text);
   box-sizing: border-box;
+  border-bottom: solid rgba(0, 0, 0, 0.1);
 }
 
 .heading {

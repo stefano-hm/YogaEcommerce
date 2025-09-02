@@ -2,8 +2,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 3rem 1rem;
+  padding: 2rem var(--padding-container);
   background-color: var(--color-bg);
   color: var(--color-text);
   min-height: 100vh;
@@ -12,9 +11,9 @@
 .card {
   max-width: 600px;
   width: 100%;
-  background-color: var(--color-bg);
+
   border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -28,12 +27,29 @@
   max-width: 600px;
   display: flex;
   justify-content: flex-start;
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .price {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-text);
+  color: var(--color-primary-dark);
   margin-top: 1rem;
   text-align: right;
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .backWrapper {
+    padding: 0.5rem 1rem;
+  }
+
+  .price {
+    font-size: 1.25rem;
+  }
 }

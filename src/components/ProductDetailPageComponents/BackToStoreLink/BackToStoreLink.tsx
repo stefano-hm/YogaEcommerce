@@ -7,8 +7,7 @@ const BackToStoreLink = () => {
 
   return (
     <button className={styles.backButton} onClick={() => navigate('/store')}>
-      <ArrowLeft size={20} />
-      <span>Back to Store</span>
+      <ArrowLeft />
     </button>
   )
 }

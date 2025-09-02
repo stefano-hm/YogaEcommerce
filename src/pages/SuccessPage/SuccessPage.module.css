@@ -1,8 +1,8 @@
 .header {
   display: flex;
   justify-content: flex-start;
-  padding: 2rem;
-  background: var(--color-bg-alt);
+  padding-top: 2rem;
+  padding-left: 2rem;
 }
 
 .page {
@@ -12,7 +12,6 @@
   padding: 4rem 2rem;
   min-height: 100vh;
   align-items: center;
-  background: var(--color-bg-alt);
   color: var(--color-text);
 }
 
@@ -20,9 +19,7 @@
   width: 100%;
   max-width: 720px;
   background-color: var(--color-bg);
-  padding: 2.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  padding: 1.5rem;
   text-align: center;
 }
 

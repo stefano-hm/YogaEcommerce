@@ -27,6 +27,13 @@ const HomePage = () => {
         <div className={styles.section}>
           <HeroSection />
         </div>
+
+        {address && (
+          <div className={styles.section}>
+            <PurchasedCoursesSection walletAddress={address} />
+          </div>
+        )}
+
         <div className={styles.section}>
           <BenefitsSection />
         </div>
@@ -36,13 +43,6 @@ const HomePage = () => {
         <div className={styles.section}>
           <HowItWorksSection />
         </div>
-
-        {address && (
-          <div className={styles.section}>
-            <PurchasedCoursesSection walletAddress={address} />
-          </div>
-        )}
-
         <div className={styles.section}>
           <CallToAction />
         </div>

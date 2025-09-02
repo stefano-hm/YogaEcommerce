@@ -23,15 +23,17 @@ const StorePage = () => {
         />
       </Helmet>
 
-      <div className={styles.container}>
-        <StoreIntro />
-      </div>
-      <div className={styles.container}>
-        <h2>Store</h2>
-        <ProductGrid products={products} firstProductRef={firstProductRef} />
-      </div>
-      <div className={styles.container}>
-        <StoreCTA onScrollToProduct={handleScrollToProduct} />
+      <div className="page-container">
+        <div className={styles.container}>
+          <StoreIntro />
+        </div>
+        <div className={styles.container}>
+          <h2>Store</h2>
+          <ProductGrid products={products} firstProductRef={firstProductRef} />
+        </div>
+        <div className={styles.container}>
+          <StoreCTA onScrollToProduct={handleScrollToProduct} />
+        </div>
       </div>
     </>
   )

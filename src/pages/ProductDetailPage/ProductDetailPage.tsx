@@ -62,10 +62,10 @@ const ProductDetailPage = () => {
         <meta name="description" content={product.description} />
       </Helmet>
 
+      <div className={styles.backWrapper}>
+        <BackToStoreLink />
+      </div>
       <main className={styles.page}>
-        <div className={styles.backWrapper}>
-          <BackToStoreLink />
-        </div>
         <div className={styles.card}>
           <ProductHeader title={product.title} imageUrl={product.imageUrl} />
           <ProductDescription fullText={product.fullText} />
