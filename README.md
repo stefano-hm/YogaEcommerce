@@ -117,6 +117,15 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 
   Displays transaction details with a direct link to **Etherscan**, plus navigation buttons to return to the store or home.
 
+  ### Backend Integration
+
+  After a successful Ethereum transaction, the frontend communicates with a lightweight backend   service built with **Express** and **SQLite**.
+
+    - **POST /purchases**: called after a successful payment to persist the purchased course         (`walletAddress` + `productId`).  
+    - **GET /purchases/:wallet**: used to retrieve all courses purchased by a specific wallet         and display them in the UI.  
+
+  This integration ensures that purchased content is tied to the user's wallet and can be         retrieved on future sessions, beyond the current frontend state.
+
 **Wallet & Payment Handling**
 
 - Wallet connection is handled by **RainbowKit**, supporting multiple providers.
@@ -153,19 +162,19 @@ main.tsx        # React entry point
 
 3. Try to purchase a product:
 
-- Ensure you have ETH on **Sepolia** or **Mainnet**.
-- Check toast notifications for success or failure.
-- Verify Etherscan link on **Success Page**.
+    - Ensure you have ETH on **Sepolia** or **Mainnet**.
+    - Check toast notifications for success or failure.
+    - Verify Etherscan link on **Success Page**.
 
 4. **Edge Cases**:
 
-- Attempt purchase with wallet disconnected (Buy button should be disabled).
-- Reject transaction in the wallet (error toast).
-- Try with insufficient funds (error toast).
+    - Attempt purchase with wallet disconnected (Buy button should be disabled).
+    - Reject transaction in the wallet (error toast).
+    - Try with insufficient funds (error toast).
 
 ## Known Issues & Limitations
 
-- No backend integration: all products are static.
+- Products are static, but purchases are persisted via a lightweight backend (**Express** + **SQLite**).
 - Only ETH payments are supported.
 - User must manually switch to the correct network (Mainnet or Sepolia).
 
