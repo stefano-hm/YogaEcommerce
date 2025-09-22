@@ -37,6 +37,9 @@ const Navbar = () => {
         <NavLink to="/store" className={({ isActive }) => (isActive ? styles.active : '')}>
           Store
         </NavLink>
+        <NavLink to="/my-courses" className={({ isActive }) => (isActive ? styles.active : '')}>
+          My Courses
+        </NavLink>
       </nav>
 
       <button className={styles.hamburger} onClick={toggleMenu} aria-label="Toggle menu">
@@ -59,6 +62,13 @@ const Navbar = () => {
             className={({ isActive }) => (isActive ? styles.active : '')}
           >
             Store
+          </NavLink>
+          <NavLink
+            to="/my-courses"
+            onClick={closeMenu}
+            className={({ isActive }) => (isActive ? styles.active : '')}
+          >
+            My Courses
           </NavLink>
         </nav>
       </div>
