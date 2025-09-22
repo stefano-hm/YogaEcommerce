@@ -12,7 +12,7 @@ export const products = [
     slug: 'basic-yoga-pack',
     title: 'Basic Yoga Pack',
     description:
-      'Perfect for beginners. Includes 3 foundational classes to kickstart your yoga journey.',
+      'Perfect for beginners. Includes 3 foundational classes to start your yoga journey.',
     priceEth: 0.01,
     imageUrl: 'https://cdn.openart.ai/uploads/image_bW6gWU2r_1754912041671_512.webp',
     fullText: `The Basic Yoga Pack is the perfect starting point for anyone new to yoga. With three foundational classes, you'll learn essential postures, breathing techniques, and the basic principles of movement and alignment. Each session is designed to be accessible, clear, and supportive—helping you build strength, flexibility, and confidence on the mat. Whether you're looking to improve your physical wellbeing or simply create a mindful routine, this pack will guide you step by step into your yoga journey.`,

@@ -12,7 +12,11 @@ const ProductGrid = ({ products, firstProductRef }: ProductGridProps) => {
   return (
     <div className={styles.grid}>
       {products.map((product, index) => (
-        <div key={product.slug} ref={index === 0 ? firstProductRef : undefined}>
+        <div
+          key={product.slug}
+          ref={index === 0 ? firstProductRef : undefined}
+          className={styles.cardWrapper}
+        >
           <ProductCard product={product} />
         </div>
       ))}

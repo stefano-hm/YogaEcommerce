@@ -2,8 +2,9 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: var(--color-bg-alt); /* sfondo alternativo coerente */
-  border: 1px solid #e0e0e0; /* fallback, eventualmente puoi creare --color-border */
+  height: 100%;
+  background-color: var(--color-bg-alt);
+  border: 1px solid #e0e0e0;
   border-radius: var(--radius);
   padding: 1rem;
   transition:
@@ -13,7 +14,7 @@
 
 .card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* leggermente più soft del precedente */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
 }
 
 .image {
@@ -36,6 +37,7 @@
   font-size: 0.95rem;
   color: var(--color-muted);
   margin-bottom: 1rem;
+  flex-grow: 1;
   flex-grow: 1;
   font-family: var(--font-body);
 }
