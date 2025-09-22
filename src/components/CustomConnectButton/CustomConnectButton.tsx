@@ -2,7 +2,12 @@ import { ConnectButton } from '@rainbow-me/rainbowkit'
 import styles from './CustomConnectButton.module.css'
 import { useMediaQuery } from 'react-responsive'
 
-const CustomConnectButton = () => {
+type Props = {
+  label?: string
+  className?: string
+}
+
+const CustomConnectButton = ({ label, className }: Props) => {
   const isMobile = useMediaQuery({ maxWidth: 768 })
 
   return (
@@ -13,8 +18,12 @@ const CustomConnectButton = () => {
 
         if (!connected) {
           return (
-            <button className={styles.button} onClick={openConnectModal} type="button">
-              Connect
+            <button
+              className={`${styles.button} ${className || ''}`}
+              onClick={openConnectModal}
+              type="button"
+            >
+              {label || 'Connect'}
             </button>
           )
         }

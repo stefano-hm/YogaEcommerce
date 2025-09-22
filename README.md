@@ -119,12 +119,11 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 
   ### Backend Integration
 
-  After a successful Ethereum transaction, the frontend communicates with a lightweight backend   service built with **Express** and **SQLite**.
+  After a successful Ethereum transaction, the frontend communicates with a lightweight backend service built with **Express** and **SQLite**.
+  - **POST /purchases**: called after a successful payment to persist the purchased course (`walletAddress` + `productId`).
+  - **GET /purchases/:wallet**: used to retrieve all courses purchased by a specific wallet and display them in the UI.
 
-    - **POST /purchases**: called after a successful payment to persist the purchased course         (`walletAddress` + `productId`).  
-    - **GET /purchases/:wallet**: used to retrieve all courses purchased by a specific wallet         and display them in the UI.  
-
-  This integration ensures that purchased content is tied to the user's wallet and can be         retrieved on future sessions, beyond the current frontend state.
+  This integration ensures that purchased content is tied to the user's wallet and can be retrieved on future sessions, beyond the current frontend state.
 
 **Wallet & Payment Handling**
 
@@ -161,16 +160,14 @@ main.tsx        # React entry point
 2. Navigate between **Home**, **Store**, and **Product Detail** pages.
 
 3. Try to purchase a product:
-
-    - Ensure you have ETH on **Sepolia** or **Mainnet**.
-    - Check toast notifications for success or failure.
-    - Verify Etherscan link on **Success Page**.
+   - Ensure you have ETH on **Sepolia** or **Mainnet**.
+   - Check toast notifications for success or failure.
+   - Verify Etherscan link on **Success Page**.
 
 4. **Edge Cases**:
-
-    - Attempt purchase with wallet disconnected (Buy button should be disabled).
-    - Reject transaction in the wallet (error toast).
-    - Try with insufficient funds (error toast).
+   - Attempt purchase with wallet disconnected (Buy button should be disabled).
+   - Reject transaction in the wallet (error toast).
+   - Try with insufficient funds (error toast).
 
 ## Known Issues & Limitations
 
