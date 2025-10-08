@@ -8,9 +8,13 @@
 
 Serenity Yoga is an online store designed to help John, owner of a yoga studio, expand his business by selling yoga courses online. The e-commerce platform allows customers to purchase yoga packages using **Ethereum** after connecting their wallet. Wallet connection and payment processing are seamlessly integrated through **RainbowKit**, supporting MetaMask, Coinbase Wallet, Rainbow, and WalletConnect.
 
+---
+
 ## Homepage Preview
 
-<img width="1732" height="861" alt="image" src="https://github.com/user-attachments/assets/6bfb6054-9a93-4aa5-90a4-1c92ce6c8127" />
+<img width="1495" height="866" alt="Screenshot 2025-09-22 181501" src="https://github.com/user-attachments/assets/a016dfee-ea68-463e-ae92-e9ef0154b574" />
+
+---
 
 ## Technologies Used
 
@@ -51,6 +55,8 @@ Serenity Yoga is an online store designed to help John, owner of a yoga studio, 
 - Biome 1.8.0 – linting and code quality checks
 - Buffer 6.0.3 – binary data handling (Web3 utility)
 - @wagmi/cli – CLI for Wagmi configuration
+
+---
 
 ## Installation & Setup
 
@@ -94,13 +100,19 @@ npm run preview
 npm run lint
 ```
 
+---
+
 ## E-commerce Architecture & Flow
 
-The Serenity Yoga application is structured as a Single Page Application (SPA) with **four main pages**:
+The Serenity Yoga application is structured as a Single Page Application (SPA) with **five main pages**:
 
 - **Home Page**
 
   Brief project introduction with a call-to-action button to visit the store.
+
+- **Purchased Courses Page**
+
+  Displays all courses purchased by the connected wallet. 
 
 - **Store Page**
 
@@ -117,6 +129,8 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 
   Displays transaction details with a direct link to **Etherscan**, plus navigation buttons to return to the store or home.
 
+  ---
+
   ### Backend Integration
 
   After a successful Ethereum transaction, the frontend communicates with a lightweight backend service built with **Express** and **SQLite**.
@@ -132,6 +146,8 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 - Payments can be made on **Mainnet** or **Sepolia** (test network).
 - Error handling for rejected transactions, insufficient funds, and other failures.
 
+---
+
 ## Key Features
 
 - **Wallet Connection** (MetaMask, Coinbase Wallet, Rainbow, WalletConnect)
@@ -140,24 +156,29 @@ The Serenity Yoga application is structured as a Single Page Application (SPA) w
 - **ETH Payments** via connected wallet
 - **Real-time Transaction Feedback** with toast notifications
 - **Success Page** with transaction details & Etherscan link
+- **Purchased Courses Page** showing all courses tied to the connected wallet
 - **Responsive UI** for desktop & mobile
+
+---
 
 ## Project Structure (simplified)
 
 ```bash
 src/
 components/     # Reusable UI components
-pages/          # Page components (Home, Store, ProductDetail, Success)
+pages/          # Page components (Home, Store, PurchasedCourses ProductDetail, Success)
 data/           # Product data definitions
 App.tsx         # Main app entry
 main.tsx        # React entry point
 ```
 
+---
+
 ## Manual Testing
 
 1. **Connect a Wallet** via the navbar button (MetaMask, Coinbase, Rainbow, WalletConnect).
 
-2. Navigate between **Home**, **Store**, and **Product Detail** pages.
+2. Navigate between **Home**, **Store**, **Purchased Courses** and **Product Detail** pages.
 
 3. Try to purchase a product:
    - Ensure you have ETH on **Sepolia** or **Mainnet**.
@@ -169,11 +190,15 @@ main.tsx        # React entry point
    - Reject transaction in the wallet (error toast).
    - Try with insufficient funds (error toast).
 
+---
+
 ## Known Issues & Limitations
 
 - Products are static, but purchases are persisted via a lightweight backend (**Express** + **SQLite**).
 - Only ETH payments are supported.
 - User must manually switch to the correct network (Mainnet or Sepolia).
+
+---
 
 ## Author
 
