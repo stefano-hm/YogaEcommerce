@@ -23,6 +23,9 @@ const HomePage = () => {
         <div className={styles.section}>
           <HeroSection />
         </div>
+        <div className={styles.section}>
+          <CallToAction />
+        </div>
 
         <div className={styles.section}>
           <BenefitsSection />
@@ -32,9 +35,6 @@ const HomePage = () => {
         </div>
         <div className={styles.section}>
           <HowItWorksSection />
-        </div>
-        <div className={styles.section}>
-          <CallToAction />
         </div>
       </main>
     </>

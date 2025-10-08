@@ -35,9 +35,15 @@ const ProductDetailPage = () => {
         value: parseEther(product.priceEth.toString()),
       })
 
-      toast.success('Purchase successful!', { duration: 8000 })
+      try {
+        await savePurchase(address, product.slug)
+      } catch (saveErr) {
+        console.error('[savePurchase] failed:', saveErr)
+        toast.error('Transaction completed, but failed to record the purchase.')
+        return
+      }
 
-      await savePurchase(address, product.slug)
+      toast.success('Purchase successful!', { duration: 8000 })
 
       navigate('/success', { state: { product, txHash: hash } })
     } catch (err: any) {
