@@ -20,6 +20,7 @@ const PurchasedCoursesSection = ({ walletAddress }: PurchasedCoursesSectionProps
 
     getPurchases(walletAddress)
       .then((data) => {
+        console.log('[PurchasedCoursesSection] data received:', data);
         const slugs = data.map((item: any) => (typeof item === 'string' ? item : item.slug))
         setPurchased(slugs)
       })
