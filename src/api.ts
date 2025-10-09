@@ -1,7 +1,18 @@
-const API_URL =
-  import.meta.env.MODE === "production"
-    ? import.meta.env.VITE_API_URL_PROD
-    : import.meta.env.VITE_API_URL_LOCAL;
+const API_URL = (() => {
+  const envUrl =
+    import.meta.env.MODE === "production"
+      ? import.meta.env.VITE_API_URL_PROD
+      : import.meta.env.VITE_API_URL_LOCAL;
+
+  if (!envUrl) {
+    console.warn(
+      "[api] VITE_API_URL non impostata correttamente, uso fallback http://127.0.0.1:4000"
+    );
+    return "http://127.0.0.1:4000";
+  }
+
+  return envUrl;
+})();
 
 console.log("[api] API_URL resolved to:", API_URL);
 
